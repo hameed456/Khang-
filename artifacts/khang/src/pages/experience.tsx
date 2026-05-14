@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "wouter";
 import { useGetFeaturedProducts, getGetFeaturedProductsQueryKey } from "@workspace/api-client-react";
@@ -6,17 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Star, ArrowRight } from "lucide-react";
 import riceImg from "@assets/7925ebcd959bb480bd051353faa04089_1778676151741.jpg";
 
-const floatingVariants = {
+const floatingVariants: Variants = {
   animate: {
     y: [0, -12, 0],
-    transition: { duration: 3.5, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 3.5, repeat: Infinity, ease: "easeInOut" as const },
   },
 };
 
-const floatingVariants2 = {
+const floatingVariants2: Variants = {
   animate: {
     y: [0, -18, 0],
-    transition: { duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 },
+    transition: { duration: 4.2, repeat: Infinity, ease: "easeInOut" as const, delay: 0.8 },
   },
 };
 
